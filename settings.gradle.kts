@@ -1,7 +1,6 @@
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
-    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -19,8 +18,8 @@ dependencyResolutionManagement {
 
 rootProject.name = "KonturMobileUpdateGradlePlugin"
 include(":app")
-include(":feature")
 include(":feature:feature1")
-include(":common")
 include(":common:base-feature")
 include(":feature:feature2")
+include(":feature:feature3")
+include(":feature:feature3")
