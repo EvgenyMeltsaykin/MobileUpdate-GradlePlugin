@@ -4,7 +4,7 @@ import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
 @Suppress("UnstableApiUsage")
-class FeaturePlugin : BasePlugin() {
+class FeatureComposePlugin : BasePlugin() {
     override fun apply(target: Project) = target.applyAndroid()
 
     private fun Project.applyAndroid() {
@@ -16,15 +16,17 @@ class FeaturePlugin : BasePlugin() {
 
         android {
             buildFeatures.apply {
-                viewBinding = true
+                compose = true
+            }
+
+            composeOptions {
+                kotlinCompilerExtensionVersion = getVersion(getVersionCatalog(), DependenciesHelper.Versions.composeCompiler)
             }
         }
 
         dependencies {
             implementation(project(":common:base-feature"))
-            implementation("androidx.core:core-ktx:1.10.1")
-            implementation("androidx.appcompat:appcompat:1.6.1")
-            implementation("com.google.android.material:material:1.9.0")
+            implementation(getVersionCatalog(), DependenciesHelper.Libs.compose)
         }
     }
 }

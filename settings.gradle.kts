@@ -19,8 +19,7 @@ dependencyResolutionManagement {
 
 rootProject.name = "KonturMobileUpdateGradlePlugin"
 include(":app")
-include(":feature")
 include(":feature:feature1")
-include(":common")
 include(":common:base-feature")
 include(":feature:feature2")
+include(":feature:feature3")

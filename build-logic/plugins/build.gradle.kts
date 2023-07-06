@@ -13,9 +13,13 @@ gradlePlugin {
             id = "convention.common"
             implementationClass = "com.emeltsaykin.buildlogic.plugins.CommonPlugin"
         }
-        register("feature-plugin") {
-            id = "convention.feature"
-            implementationClass = "com.emeltsaykin.buildlogic.plugins.FeaturePlugin"
+        register("feature-view-plugin") {
+            id = "convention.feature.view"
+            implementationClass = "com.emeltsaykin.buildlogic.plugins.FeatureViewPlugin"
+        }
+        register("feature-compose-plugin") {
+            id = "convention.feature.compose"
+            implementationClass = "com.emeltsaykin.buildlogic.plugins.FeatureComposePlugin"
         }
         register("test-plugin") {
             id = "convention.testing"

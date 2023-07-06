@@ -1,3 +1,11 @@
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
+}
+
 rootProject.name = "build-logic"
 include(":plugins")
 
@@ -6,7 +14,5 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        maven("https://www.jitpack.io")
-        maven("https://maven.google.com")
     }
 }
