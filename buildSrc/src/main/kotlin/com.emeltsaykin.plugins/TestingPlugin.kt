@@ -1,9 +1,8 @@
-package com.emeltsaykin.buildlogic.plugins
+package com.emeltsaykin.plugins
 
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
-@Suppress("UnstableApiUsage")
 class TestingPlugin : BasePlugin() {
     override fun apply(target: Project) = target.applyAndroid()
 

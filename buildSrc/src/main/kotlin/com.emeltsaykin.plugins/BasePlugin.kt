@@ -1,4 +1,4 @@
-package com.emeltsaykin.buildlogic.plugins
+package com.emeltsaykin.plugins
 
 import com.android.build.gradle.BaseExtension
 import org.gradle.api.Plugin

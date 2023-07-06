@@ -1,11 +1,8 @@
-package com.emeltsaykin.buildlogic.plugins
+package com.emeltsaykin.plugins
 
 import org.gradle.api.JavaVersion
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.withType
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-@Suppress("UnstableApiUsage")
 class CommonPlugin : BasePlugin() {
     override fun apply(target: Project) = target.applyAndroid()
 
@@ -15,9 +12,6 @@ class CommonPlugin : BasePlugin() {
 
             defaultConfig {
                 minSdk = 26
-                targetSdk = 33
-                versionCode = 1
-                versionName = "1.0"
             }
 
             buildTypes {
@@ -30,12 +24,6 @@ class CommonPlugin : BasePlugin() {
             compileOptions {
                 sourceCompatibility = JavaVersion.VERSION_1_8
                 targetCompatibility = JavaVersion.VERSION_1_8
-            }
-
-            tasks.withType<KotlinCompile>().configureEach {
-                kotlinOptions {
-                    jvmTarget = "1.8"
-                }
             }
         }
     }

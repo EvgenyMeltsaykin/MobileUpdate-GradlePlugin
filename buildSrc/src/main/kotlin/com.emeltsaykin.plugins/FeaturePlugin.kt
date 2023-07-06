@@ -1,9 +1,8 @@
-package com.emeltsaykin.buildlogic.plugins
+package com.emeltsaykin.plugins
 
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies
 
-@Suppress("UnstableApiUsage")
 class FeaturePlugin : BasePlugin() {
     override fun apply(target: Project) = target.applyAndroid()
 
@@ -22,9 +21,6 @@ class FeaturePlugin : BasePlugin() {
 
         dependencies {
             implementation(project(":common:base-feature"))
-            implementation("androidx.core:core-ktx:1.10.1")
-            implementation("androidx.appcompat:appcompat:1.6.1")
-            implementation("com.google.android.material:material:1.9.0")
         }
     }
 }
